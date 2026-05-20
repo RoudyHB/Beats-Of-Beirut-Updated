@@ -3,108 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News & Events | Beats of Beirut</title>
+    <title>News | Beats of Beirut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-container">
-                <img src="images/Logo.png" alt="Beats of Beirut Logo" class="nav-logo">
-            </a>
-            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
+            <a href="index.html"><img src="Images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <nav class="nav-links" id="navLinks">
+            <div class="nav-links">
                 <a href="index.html" class="nav-item">Home</a>
-                <a href="about.html" class="nav-item">About</a>
-                <a href="news.html" class="nav-item active">News & Events</a>
                 <a href="performers.html" class="nav-item">Performers</a>
+                <a href="news.html" class="nav-item active">News</a>
+                <a href="about.html" class="nav-item">About</a>
                 <a href="faq.html" class="nav-item">FAQ</a>
-                <a href="contact.html" class="nav-item cta-nav">Contact Us</a>
-            </nav>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="contact.html" class="nav-item cta-nav">Get Tickets</a>
+            </div>
         </div>
+    </nav>
+
+    <header class="subpage-header-container">
+        <span class="badge">Updates</span>
+        <h1 class="hero-title">Latest <span class="gradient-text">News</span></h1>
+        <p class="hero-description">Stay updated on venue announcements, rehearsal clips, and ticket drops.</p>
     </header>
 
-    <!-- Subpage Hero Banner -->
-    <main class="hero-section" style="min-height: auto; padding-bottom: 2rem;">
-        <div class="countdown-container" style="text-align: left; max-width: 1200px; margin: 0 auto;">
-            <span class="badge">Press Room</span>
-            <h1 class="hero-title" style="font-size: 3.5rem;">Latest <span class="gradient-text">Updates & Announcements</span></h1>
-            <p class="hero-description">Stay updated with concert preparations, rehearsal highlights, and announcements regarding our symphonic rock showcase.</p>
+    <main class="subpage-content-section">
+        <div class="subpage-grid-container">
+            <article class="content-block-card">
+                <span class="meta-label">MAY 20, 2026</span>
+                <h2 style="margin-top: 0.5rem;">Orchestra Rehearsals Begin</h2>
+                <p>The classical ensemble has officially assembled in Beirut to begin tracking and arrangement practices alongside our electronic production staff.</p>
+            </article>
+
+            <article class="content-block-card">
+                <span class="meta-label">MAY 10, 2026</span>
+                <h2 style="margin-top: 0.5rem;">Early Bird Tickets Sold Out</h2>
+                <p>Our initial batch of early tier passes went fast. General admission phase tier ticketing options open up next week. Keep an eye out!</p>
+            </article>
         </div>
     </main>
 
-    <!-- Interactive News Cards Grid -->
-    <section class="countdown-section" style="background: var(--bg-dark); border: none; padding-top: 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; padding: 0 1rem;">
-            
-            <!-- Card 1 -->
-            <div class="timer-box" style="text-align: left; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px;">
-                <div>
-                    <span class="badge" style="margin-bottom: 1rem;">ANNOUNCEMENT</span>
-                    <h3 style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">Ticket Box Office is Live!</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Reservations for "We Will Rock You" have officially opened on Virgin Ticketing. Secure premium seats early to ensure the best viewing experience at Casino du Liban.</p>
-                </div>
-                <span class="meta-label" style="margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">MAY 10, 2026</span>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="timer-box" style="text-align: left; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px;">
-                <div>
-                    <span class="badge" style="margin-bottom: 1rem; background: rgba(0, 114, 255, 0.08); color: var(--accent-blue); border-color: rgba(0, 114, 255, 0.2);">BEHIND THE SCENES</span>
-                    <h3 style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">Orchestra Rehearsals Underway</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Maestro Harout Fazlian has officially gathered the symphonic musicians to begin score synchronization, creating classical arrangements for classic Queen anthems.</p>
-                </div>
-                <span class="meta-label" style="margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">MAY 04, 2026</span>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="timer-box" style="text-align: left; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px;">
-                <div>
-                    <span class="badge" style="margin-bottom: 1rem;">COMMUNITY IMPACT</span>
-                    <h3 style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">AFEL Welcomes Rotary Committee</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Members of the Rotary Club of Beirut Cedars visited the AFEL development centers to review strategic funding initiatives made possible by this event's ticket revenue.</p>
-                </div>
-                <span class="meta-label" style="margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">APRIL 28, 2026</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Premium Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/Logo.png" alt="Beats of Beirut" class="footer-logo">
-                <p>Merging the raw energy of rock performance with orchestral majesty for a powerful social cause.</p>
+                <img src="Images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <p>Bridging classical orchestration with cutting-edge electronic audio synthesis.</p>
             </div>
-            <div class="footer-nav">
+            <nav class="footer-nav">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="news.html">News & Events</a>
                 <a href="performers.html">Performers</a>
+                <a href="news.html">News</a>
+                <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
-            </div>
+            </nav>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Beats of Beirut. All Rights Reserved.</p>
+            <p>&copy; 2026 Beats of Beirut. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
-            navLinks.classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('open');
-        }
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
