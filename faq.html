@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frequently Asked Questions - Beats of Beirut</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html">
+        <img src="images/Logo.png" alt="Beats of Beirut Logo" class="Logo" />
+      </a>
+      <!-- Hamburger button (visible on small screens) -->
+      <button id="hamburgerBtn" class="hamburger d-md-none" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+
+      <!-- Navigation (will be toggled) -->
+      <div id="mobileNav" class="nav d-none d-md-flex flex-column flex-md-row" role="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News and Events</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="performers.html">Performers</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FAQ Content -->
+  <main class="main">
+  <div class="text-content">
+    <h1>Frequently Asked Questions</h1>
+
+    <section class="faq-section" aria-label="General Information">
+      <h2>General Information</h2>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq1-answer" 
+          id="faq1-question"
+        >
+          What is Beats of Beirut?
+        </button>
+        <div id="faq1-answer" class="faq-answer" aria-labelledby="faq1-question">
+          <p>Beats of Beirut is a premier event advertising platform dedicated to promoting the most exciting concerts, festivals, and entertainment experiences in Lebanon.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq2-answer" 
+          id="faq2-question"
+        >
+          How can I stay updated on upcoming events?
+        </button>
+        <div id="faq2-answer" class="faq-answer" aria-labelledby="faq2-question">
+          <p>You can subscribe to our newsletter, follow us on social media, or regularly check our website for the latest event announcements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-label="Tickets and Reservations">
+      <h2>Tickets and Reservations</h2>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq3-answer" 
+          id="faq3-question"
+        >
+          Where can I purchase tickets for events?
+        </button>
+        <div id="faq3-answer" class="faq-answer" aria-labelledby="faq3-question">
+          <p>Tickets can be purchased through our official website or through authorized ticketing partners listed on our event pages.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq4-answer" 
+          id="faq4-question"
+        >
+          Are tickets refundable?
+        </button>
+        <div id="faq4-answer" class="faq-answer" aria-labelledby="faq4-question">
+          <p>Refund policies vary by event. Please refer to the specific event page for detailed information on ticket refunds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-label="Contact and Support">
+      <h2>Contact and Support</h2>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq5-answer" 
+          id="faq5-question"
+        >
+          How can I contact the event organizers?
+        </button>
+        <div id="faq5-answer" class="faq-answer" aria-labelledby="faq5-question">
+          <p>Contact information for event organizers is provided on each event page. Alternatively, you can reach out to us through our contact page.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button 
+          class="faq-question" 
+          aria-expanded="false" 
+          aria-controls="faq6-answer" 
+          id="faq6-question"
+        >
+          Who can I speak to for media inquiries?
+        </button>
+        <div id="faq6-answer" class="faq-answer" aria-labelledby="faq6-question">
+          <p>For media inquiries, please email us at media@beatsofbeirut.com.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News and Events</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="performers.html">Performers</a>
+        <a href="faq.html" class="active">FAQ</a>
+      </nav>
+      <br />
+      &copy; 2025 Beats of Beirut. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
