@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght=800&family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -31,40 +31,38 @@
         </div>
     </header>
 
-    <!-- Subpage Hero Banner -->
-    <main class="hero-section" style="min-height: auto; padding-bottom: 2rem;">
-        <div class="countdown-container" style="text-align: left; max-width: 1200px; margin: 0 auto;">
-            <span class="badge">Our Mission</span>
-            <h1 class="hero-title" style="font-size: 3.5rem;">Symphonic Rock For A <span class="gradient-text">Noble Cause</span></h1>
-            <p class="hero-description">Learn more about the vision behind Beats of Beirut, our organizers, and the lives we aim to transform through music.</p>
-        </div>
-    </main>
+    <!-- Subpage Structural Header Banner -->
+    <div class="subpage-header-container">
+        <span class="badge">Our Mission</span>
+        <h1 class="hero-title">Symphonic Rock For A <span class="gradient-text">Noble Cause</span></h1>
+        <p class="hero-description">Learn more about the vision behind Beats of Beirut, our organizers, and the lives we aim to transform through music.</p>
+    </div>
 
-    <!-- Content Breakdown Grid -->
-    <section class="countdown-section" style="background: var(--bg-dark); border: none;">
-        <div class="hero-container" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+    <!-- Clean Content Split Block Section -->
+    <section class="subpage-content-section">
+        <div class="subpage-grid-container">
             
-            <!-- Left Grid Column: The Vision -->
-            <div class="event-meta-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 0;">
-                <h2 class="gradient-text" style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 1.8rem;">The Vision</h2>
-                <p style="color: var(--text-secondary);">
-                    Organized proudly by the <strong>Rotary Club of Beirut Cedars</strong>, "We Will Rock You" Symphonic Rock Concert is born out of a desire to merge cultural excellence with impactful social responsibility. 
+            <!-- Left Card: The Vision -->
+            <article class="content-block-card">
+                <h2 class="gradient-text">The Vision</h2>
+                <p>
+                    Organized proudly by the <strong>Rotary Club of Beirut Cedars</strong>, the "We Will Rock You" Symphonic Rock Concert is born out of a desire to merge cultural excellence with impactful social responsibility. 
                 </p>
-                <p style="color: var(--text-secondary);">
+                <p>
                     By blending iconic rock anthems with a full master class symphony orchestra, we create a high-octane sensory environment that unites rock enthusiasts and classical music lovers alike under one roof at the prestigious Casino du Liban.
                 </p>
-            </div>
+            </article>
 
-            <!-- Right Grid Column: The Cause (AFEL) -->
-            <div class="event-meta-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 0; border-color: rgba(0, 242, 254, 0.2);">
-                <h2 class="gradient-text" style="font-family: 'Cabinet Grotesk', sans-serif; font-size: 1.8rem;">Supporting AFEL</h2>
-                <p style="color: var(--text-secondary);">
+            <!-- Right Card: The Cause (AFEL) -->
+            <article class="content-block-card" style="border-color: rgba(0, 242, 254, 0.15);">
+                <h2 class="gradient-text">Supporting AFEL</h2>
+                <p>
                     All net proceeds from this breathtaking performance go directly to support <strong>AFEL (Association Foyer de l'Enfant Libanais)</strong>. 
                 </p>
-                <p style="color: var(--text-secondary);">
+                <p>
                     For decades, AFEL has been a beacon of hope in Lebanon, dedicated to assisting, protecting, and providing comprehensive psychological, educational, and social rehabilitation to vulnerable children facing abuse, neglect, or extreme socio-economic hardships. Your ticket purchase directly contributes to building their brighter tomorrow.
                 </p>
-            </div>
+            </article>
 
         </div>
     </section>
