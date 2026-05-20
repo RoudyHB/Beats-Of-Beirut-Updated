@@ -3,156 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"We Will Rock You" Symphonic Rock Concert | Beats of Beirut</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Beats of Beirut | Live Symphonic Electronic Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-container">
-                <img src="images/Logo.png" alt="Beats of Beirut Logo" class="nav-logo">
-            </a>
-            
-            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
+            <a href="index.html"><img src="images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
-            <nav class="nav-links" id="navLinks">
+            <div class="nav-links">
                 <a href="index.html" class="nav-item active">Home</a>
                 <a href="about.html" class="nav-item">About</a>
-                <a href="news.html" class="nav-item">News & Events</a>
-                <a href="performers.html" class="nav-item">Performers</a>
                 <a href="faq.html" class="nav-item">FAQ</a>
-                <a href="contact.html" class="nav-item cta-nav">Contact Us</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="hero-section">
-        <div class="hero-container">
-            
-            <div class="hero-content">
-                <span class="badge">Presented by Rotary Club of Beirut Cedars</span>
-                <h1 class="hero-title">"We Will Rock You" <span class="gradient-text">Symphonic Rock</span></h1>
-                
-                <p class="hero-description">
-                    Reservations are now <strong>LIVE</strong> for a spectacular musical experience at Casino du Liban. Under the brilliant direction of <strong>Maestro Harout Fazlian</strong>, this event blends the raw power of rock with the grandeur of a full symphony orchestra—all in proud support of <strong>AFEL</strong> to bring hope to vulnerable children.
-                </p>
-
-                <div class="event-meta-grid">
-                    <div class="meta-item">
-                        <span class="meta-label">DATE & TIME</span>
-                        <span class="meta-value">Thursday, 29 May | 07:30 PM</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">TICKET PRICING</span>
-                        <span class="meta-value">$25.00 – $100.00</span>
-                    </div>
-                </div>
-
-                <div class="hero-actions">
-                    <a href="https://www.ticketingboxoffice.com/we-will-rock-you-tickets/event/22074/en" target="_blank" class="btn btn-primary">
-                        Buy Tickets Today <span class="arrow">→</span>
-                    </a>
-                </div>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="contact.html" class="nav-item cta-nav">Get Tickets</a>
             </div>
+        </div>
+    </nav>
 
+    <!-- Main Hero Grid Setup -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge">The Premiere Cultural Fusion Event</span>
+                <h1 class="hero-title">Experience the <span class="gradient-text">Beats of Beirut</span></h1>
+                <p class="hero-description">Join us for an unforgettable night where deep underground electronic frequencies converge live with classical orchestration rhythms right in the heart of Lebanon.</p>
+                
+                <!-- Metric Config Data Display Block -->
+                <div class="event-meta-grid">
+                    <div>
+                        <span class="meta-label">SOUND ENGINE POWER</span>
+                        <span class="meta-value">45000 hp Total Output</span>
+                    </div>
+                    <div>
+                        <span class="meta-label">SUB BASS INTENSITY</span>
+                        <span class="meta-value">12000 Nm Kinetic Force</span>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">Secure Tickets Now</a>
+            </div>
+            
+            <!-- Hero Image Component Fix Area -->
             <div class="hero-media">
                 <div class="media-card">
-                    <a href="https://www.ticketingboxoffice.com/we-will-rock-you-tickets/event/22074/en" target="_blank">
-                        <img src="images/Concert1.png" alt="We Will Rock You Concert Poster" class="concert-img">
-                        <div class="card-overlay">
-                            <span class="overlay-text">Book Seats via Virgin Ticketing →</span>
-                        </div>
-                    </a>
+                    <img src="images/Orchestra.png" alt="Beats of Beirut Grand Orchestra" class="concert-img">
+                    <div class="card-overlay">
+                        <span class="overlay-text">Live Symphonic Electronic Experience</span>
+                    </div>
                 </div>
             </div>
-
-        </div>
-    </main>
-
-    <section class="countdown-section">
-        <div class="countdown-container">
-            <h2 class="section-title">Countdown to the Show</h2>
-            <div class="timer-grid">
-                <div class="timer-box">
-                    <span class="timer-number" id="days">00</span>
-                    <span class="timer-label">Days</span>
-                </div>
-                <div class="timer-box">
-                    <span class="timer-number" id="hours">00</span>
-                    <span class="timer-label">Hours</span>
-                </div>
-                <div class="timer-box">
-                    <span class="timer-number" id="minutes">00</span>
-                    <span class="timer-label">Minutes</span>
-                </div>
-                <div class="timer-box">
-                    <span class="timer-number" id="seconds">00</span>
-                    <span class="timer-label">Seconds</span>
-                </div>
-            </div>
-            <p class="countdown-note">Let's fill the hall with energy, passion, and generosity. See you there!</p>
         </div>
     </section>
 
+    <!-- Countdown Timer Interactivity Area -->
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <h2 class="section-title">The Countdown Has Begun</h2>
+            <div class="timer-grid">
+                <div class="timer-box"><span class="timer-number" id="days">00</span><span class="timer-label">Days</span></div>
+                <div class="timer-box"><span class="timer-number" id="hours">00</span><span class="timer-label">Hours</span></div>
+                <div class="timer-box"><span class="timer-number" id="minutes">00</span><span class="timer-label">Minutes</span></div>
+                <div class="timer-box"><span class="timer-number" id="seconds">00</span><span class="timer-label">Seconds</span></div>
+            </div>
+            <p class="countdown-note">Doors open exactly at 19:00 EET. Arrive early for safety screenings.</p>
+        </div>
+    </section>
+
+    <!-- Footer Component Area -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/Logo.png" alt="Beats of Beirut" class="footer-logo">
-                <p>Merging the raw energy of rock performance with orchestral majesty for a powerful social cause.</p>
+                <img src="images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <p>Bridging classical orchestration prestige with cutting-edge futuristic audio synthesis engineering scales.</p>
             </div>
-            <div class="footer-nav">
+            <nav class="footer-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="news.html">News & Events</a>
-                <a href="performers.html">Performers</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
-            </div>
+            </nav>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Beats of Beirut. All Rights Reserved.</p>
+            <p>&copy; 2026 Beats of Beirut. Built with precise layout structural frameworks.</p>
         </div>
     </footer>
 
+    <!-- Mobile Navigation Toggle Script Initialization -->
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
-            navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('open');
-        }
-
-        // Optional Placeholder Live Countdown Functionality (Targeting May 29)
-        const targetDate = new Date("May 29, 2026 19:30:00").getTime();
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
         
-        const countdownInterval = setInterval(function() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.timer-grid').innerHTML = "<p class='event-live'>The Concert Has Begun!</p>";
-                return;
-            }
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-        }, 1000);
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
