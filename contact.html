@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html"><img src="images/Logo.png" alt="Beats of Beirut" class="nav-logo"></a>
@@ -29,33 +30,57 @@
         </div>
     </nav>
 
+    <!-- Page Header -->
     <header class="subpage-header-container">
-        <span class="badge">Get in Touch</span>
-        <h1 class="hero-title">Connect With <span class="gradient-text">Our Team</span></h1>
-        <p class="hero-description">Reach out for general inquiries, press relations, or artist submission requests.</p>
+        <span class="badge">Get In Touch</span>
+        <h1 class="hero-title">Contact <span class="gradient-text">Our Team</span></h1>
+        <p class="hero-description">Have questions about tickets, schedules, or sponsorships? Drop us a line below.</p>
     </header>
 
-    <main class="subpage-content-section">
-        <div class="subpage-grid-container">
-            <div class="content-block-card">
-                <h2>Contact Information</h2>
-                <p>Have questions or want to collaborate with us? Drop a message, and our management team will reach back out to you within 48 business hours.</p>
-                <div style="margin-top: 1.5rem;">
-                    <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> info@beatsofbeirut.com</p>
-                    <p><strong>Location:</strong> Beirut, Lebanon</p>
+    <!-- Contact Form Section -->
+    <main class="subpage-content-section" style="max-width: 600px; margin: 0 auto; padding: 2rem max(1rem, 4vw);">
+        <div class="content-block-card">
+            
+            <!-- Integrated Formspree Form -->
+            <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" id="contact-form">
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="name" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color, #ffffff);">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" 
+                           style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-family: inherit;">
                 </div>
-            </div>
 
-            <div class="content-block-card">
-                <h2>Send a Message</h2>
-                <p>Fill out our safe contact portal to link up directly with our organizational staff coordinators.</p>
-                <a href="mailto:info@beatsofbeirut.com" class="btn btn-primary" style="margin-top: 1.5rem;">
-                    Launch Secure Mail Portal
-                </a>
-            </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="email" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color, #ffffff);">Email Address</label>
+                    <input type="email" id="email" name="_replyto" required placeholder="johndoe@example.com" 
+                           style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-family: inherit;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="subject" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color, #ffffff);">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Ticket Inquiry / Partnership" 
+                           style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-family: inherit;">
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <label for="message" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color, #ffffff);">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can we help you?" 
+                              style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+
+                <!-- Custom hidden field to prevent spam bots -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="cta-nav" style="width: 100%; padding: 0.85rem; border: none; font-weight: 600; cursor: pointer; text-align: center; border-radius: 6px;">
+                    Send Message
+                </button>
+                
+            </form>
+
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
