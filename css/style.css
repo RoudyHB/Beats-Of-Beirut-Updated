@@ -108,7 +108,6 @@ a {
     color: var(--bg-dark);
 }
 
-/* Mobile Menu Toggle Button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -192,7 +191,6 @@ a {
     max-width: 600px;
 }
 
-/* Metadata Info Grid */
 .event-meta-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -219,7 +217,6 @@ a {
     font-weight: 600;
 }
 
-/* Call to Action Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -241,7 +238,6 @@ a {
     box-shadow: 0 6px 25px rgba(0, 114, 255, 0.45);
 }
 
-/* Hero Media Component */
 .hero-media {
     display: flex;
     justify-content: center;
@@ -409,34 +405,10 @@ a {
     margin-bottom: 0;
 }
 
-/* Performers Layout Modifications */
-.performers-showcase-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+.content-block-card strong {
+    color: var(--accent-cyan);
 }
 
-.performer-profile-card {
-    text-align: center;
-}
-
-.performer-profile-card h3 {
-    font-family: 'Cabinet Grotesk', sans-serif;
-    font-size: 1.8rem;
-    margin: 1.5rem 0 0.5rem 0;
-}
-
-.performer-profile-card p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    max-width: 420px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* FAQ Stack Modification */
 .faq-stack-container {
     max-width: 850px;
     margin: 0 auto;
@@ -568,7 +540,6 @@ a {
         pointer-events: auto;
     }
 
-    /* Animated Close Menu Toggle */
     .menu-toggle.open span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
