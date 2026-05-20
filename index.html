@@ -12,7 +12,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html"><img src="images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <a href="index.html"><img src="Images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -20,6 +20,8 @@
             </button>
             <div class="nav-links">
                 <a href="index.html" class="nav-item active">Home</a>
+                <a href="performers.html" class="nav-item">Performers</a>
+                <a href="news.html" class="nav-item">News</a>
                 <a href="about.html" class="nav-item">About</a>
                 <a href="faq.html" class="nav-item">FAQ</a>
                 <a href="contact.html" class="nav-item">Contact</a>
@@ -28,7 +30,7 @@
         </div>
     </nav>
 
-    <!-- Main Hero Grid Setup -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
@@ -36,7 +38,6 @@
                 <h1 class="hero-title">Experience the <span class="gradient-text">Beats of Beirut</span></h1>
                 <p class="hero-description">Join us for an unforgettable night where deep electronic frequencies converge live with a full classical orchestra right here in Beirut.</p>
                 
-                <!-- Restored Clean Event Info Grid -->
                 <div class="event-meta-grid">
                     <div>
                         <span class="meta-label">DATE & TIME</span>
@@ -51,10 +52,9 @@
                 <a href="contact.html" class="btn btn-primary">Secure Tickets Now</a>
             </div>
             
-            <!-- Hero Image Component Fix Area -->
             <div class="hero-media">
                 <div class="media-card">
-                    <img src="images/Orchestra.png" alt="Beats of Beirut Grand Orchestra" class="concert-img">
+                    <img src="Images/Orchestra.png" alt="Beats of Beirut Grand Orchestra" class="concert-img">
                     <div class="card-overlay">
                         <span class="overlay-text">Live Symphonic Electronic Experience</span>
                     </div>
@@ -63,7 +63,7 @@
         </div>
     </section>
 
-    <!-- Countdown Timer Area -->
+    <!-- Countdown Timer -->
     <section class="countdown-section">
         <div class="countdown-container">
             <h2 class="section-title">The Countdown Has Begun</h2>
@@ -77,15 +77,17 @@
         </div>
     </section>
 
-    <!-- Footer Component Area -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <img src="Images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
                 <p>Bridging classical orchestration with cutting-edge electronic audio synthesis.</p>
             </div>
             <nav class="footer-nav">
                 <a href="index.html">Home</a>
+                <a href="performers.html">Performers</a>
+                <a href="news.html">News</a>
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
@@ -96,11 +98,9 @@
         </div>
     </footer>
 
-    <!-- Mobile Navigation Toggle Script -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('open');
             navLinks.classList.toggle('active');
