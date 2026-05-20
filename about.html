@@ -4,97 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Beats of Beirut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght=800&family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-container">
-                <img src="images/Logo.png" alt="Beats of Beirut Logo" class="nav-logo">
-            </a>
-            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
+            <a href="index.html"><img src="images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <nav class="nav-links" id="navLinks">
+            <div class="nav-links">
                 <a href="index.html" class="nav-item">Home</a>
                 <a href="about.html" class="nav-item active">About</a>
-                <a href="news.html" class="nav-item">News & Events</a>
-                <a href="performers.html" class="nav-item">Performers</a>
                 <a href="faq.html" class="nav-item">FAQ</a>
-                <a href="contact.html" class="nav-item cta-nav">Contact Us</a>
-            </nav>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="contact.html" class="nav-item cta-nav">Get Tickets</a>
+            </div>
         </div>
+    </nav>
+
+    <!-- Subpage Content Block Layout Group -->
+    <header class="subpage-header-container">
+        <span class="badge">Our Story</span>
+        <h1 class="hero-title">About <span class="gradient-text">Beats of Beirut</span></h1>
+        <p class="hero-description">A visionary initiative bridging cultural heritage and futuristic sonic landscapes.</p>
     </header>
 
-    <!-- Subpage Structural Header Banner -->
-    <div class="subpage-header-container">
-        <span class="badge">Our Mission</span>
-        <h1 class="hero-title">Symphonic Rock For A <span class="gradient-text">Noble Cause</span></h1>
-        <p class="hero-description">Learn more about the vision behind Beats of Beirut, our organizers, and the lives we aim to transform through music.</p>
-    </div>
-
-    <!-- Clean Content Split Block Section -->
-    <section class="subpage-content-section">
+    <main class="subpage-content-section">
         <div class="subpage-grid-container">
-            
-            <!-- Left Card: The Vision -->
             <article class="content-block-card">
-                <h2 class="gradient-text">The Vision</h2>
-                <p>
-                    Organized proudly by the <strong>Rotary Club of Beirut Cedars</strong>, the "We Will Rock You" Symphonic Rock Concert is born out of a desire to merge cultural excellence with impactful social responsibility. 
-                </p>
-                <p>
-                    By blending iconic rock anthems with a full master class symphony orchestra, we create a high-octane sensory environment that unites rock enthusiasts and classical music lovers alike under one roof at the prestigious Casino du Liban.
-                </p>
+                <h2>The Vision</h2>
+                <p>Beats of Beirut was born out of a desire to showcase the resilience, creativity, and evolution of our city's musical identity. By blending classical orchestral arrangements with modern electronic synth elements, we create an immersive artistic experience that honors our past while pioneering the future.</p>
             </article>
 
-            <!-- Right Card: The Cause (AFEL) -->
-            <article class="content-block-card" style="border-color: rgba(0, 242, 254, 0.15);">
-                <h2 class="gradient-text">Supporting AFEL</h2>
-                <p>
-                    All net proceeds from this breathtaking performance go directly to support <strong>AFEL (Association Foyer de l'Enfant Libanais)</strong>. 
-                </p>
-                <p>
-                    For decades, AFEL has been a beacon of hope in Lebanon, dedicated to assisting, protecting, and providing comprehensive psychological, educational, and social rehabilitation to vulnerable children facing abuse, neglect, or extreme socio-economic hardships. Your ticket purchase directly contributes to building their brighter tomorrow.
-                </p>
+            <article class="content-block-card">
+                <h2>The Experience</h2>
+                <p>This is more than a concert series—it's a cultural movement. From large-scale live performances featuring custom light setups to collaborative digital platforms supporting local underground producers, we provide an ecosystem where art meets innovation.</p>
             </article>
-
         </div>
-    </section>
+    </main>
 
-    <!-- Premium Footer -->
+    <!-- Footer Component Area -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/Logo.png" alt="Beats of Beirut" class="footer-logo">
-                <p>Merging the raw energy of rock performance with orchestral majesty for a powerful social cause.</p>
+                <img src="images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <p>Bridging classical orchestration prestige with cutting-edge futuristic audio synthesis engineering scales.</p>
             </div>
-            <div class="footer-nav">
+            <nav class="footer-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="news.html">News & Events</a>
-                <a href="performers.html">Performers</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
-            </div>
+            </nav>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Beats of Beirut. All Rights Reserved.</p>
+            <p>&copy; 2026 Beats of Beirut. Built with precise layout structural frameworks.</p>
         </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
-            navLinks.classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('open');
-        }
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
