@@ -568,3 +568,35 @@ a {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   8. CONTACT FORM SUBMIT BUTTON
+   ========================================================================== */
+.btn-submit {
+    background: linear-gradient(135deg, #bf5af2 0%, #5ac8fa 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 4px 15px rgba(191, 90, 242, 0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(90, 200, 250, 0.4);
+    background: linear-gradient(135deg, #cc70ff 0%, #70d3ff 100%);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Handles button look when disabled during Formspree AJAX request processing */
+.btn-submit:disabled {
+    background: var(--bg-surface-glow);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
+}
