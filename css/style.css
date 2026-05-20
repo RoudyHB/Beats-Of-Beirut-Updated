@@ -108,7 +108,7 @@ a {
     color: var(--bg-dark);
 }
 
-/* Mobile Menu Toggle button */
+/* Mobile Menu Toggle Button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -126,7 +126,7 @@ a {
 }
 
 /* ==========================================================================
-   3. HERO SECTION (SPLIT GRID)
+   3. HERO SECTION (SPLIT GRID FOR HOME)
    ========================================================================== */
 .hero-section {
     padding: 9rem 2rem 5rem 2rem;
@@ -356,11 +356,102 @@ a {
 }
 
 /* ==========================================================================
-   5. MODERN PRESTIGE FOOTER
+   5. DEDICATED INNER SUBPAGE LAYOUTS
+   ========================================================================== */
+.subpage-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10rem 2rem 1rem 2rem;
+    text-align: left;
+}
+
+.subpage-content-section {
+    padding: 2rem 2rem 6rem 2rem;
+    background: var(--bg-dark);
+}
+
+.subpage-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.content-block-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.content-block-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 242, 254, 0.2);
+}
+
+.content-block-card h2 {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.content-block-card p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+.content-block-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Performers Layout Modifications */
+.performers-showcase-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.performer-profile-card {
+    text-align: center;
+}
+
+.performer-profile-card h3 {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.performer-profile-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FAQ Stack Modification */
+.faq-stack-container {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   6. MODERN PRESTIGE FOOTER
    ========================================================================== */
 .footer {
     padding: 5rem 2rem 2rem 2rem;
     background: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -414,13 +505,18 @@ a {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE BREAKPOINTS (MOBILE FRIENDLY)
+   7. RESPONSIVE BREAKPOINTS (MOBILE & TABLET FRIENDLY)
    ========================================================================== */
 @media (max-width: 992px) {
-    .hero-container {
+    .hero-container, .subpage-grid-container {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+    }
+    
+    .subpage-header-container {
+        text-align: center;
+        padding-top: 8rem;
     }
     
     .hero-description {
@@ -439,7 +535,7 @@ a {
     }
     
     .hero-media {
-        order: -1; /* Puts image above text on smaller screens */
+        order: -1;
         max-width: 450px;
         margin: 0 auto;
     }
