@@ -1,161 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frequently Asked Questions - Beats of Beirut</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Beats of Beirut</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-container">
-      <a href="index.html">
-        <img src="images/Logo.png" alt="Beats of Beirut Logo" class="Logo" />
-      </a>
-      <!-- Hamburger button (visible on small screens) -->
-      <button id="hamburgerBtn" class="hamburger d-md-none" aria-label="Toggle navigation">
-        ☰
-      </button>
-
-
-      <!-- Navigation (will be toggled) -->
-      <div id="mobileNav" class="nav d-none d-md-flex flex-column flex-md-row" role="navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="news.html">News and Events</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="performers.html">Performers</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- FAQ Content -->
-  <main class="main">
-  <div class="text-content">
-    <h1>Frequently Asked Questions</h1>
-
-    <section class="faq-section" aria-label="General Information">
-      <h2>General Information</h2>
-
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq1-answer" 
-          id="faq1-question"
-        >
-          What is Beats of Beirut?
-        </button>
-        <div id="faq1-answer" class="faq-answer" aria-labelledby="faq1-question">
-          <p>Beats of Beirut is a premier event advertising platform dedicated to promoting the most exciting concerts, festivals, and entertainment experiences in Lebanon.</p>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="images/Logo.png" alt="Beats of Beirut Logo" class="nav-logo">
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="news.html" class="nav-item">News & Events</a>
+                <a href="performers.html" class="nav-item">Performers</a>
+                <a href="faq.html" class="nav-item active">FAQ</a>
+                <a href="contact.html" class="nav-item cta-nav">Contact Us</a>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq2-answer" 
-          id="faq2-question"
-        >
-          How can I stay updated on upcoming events?
-        </button>
-        <div id="faq2-answer" class="faq-answer" aria-labelledby="faq2-question">
-          <p>You can subscribe to our newsletter, follow us on social media, or regularly check our website for the latest event announcements.</p>
+    <!-- Subpage Hero Banner -->
+    <main class="hero-section" style="min-height: auto; padding-bottom: 2rem;">
+        <div class="countdown-container" style="text-align: left; max-width: 1200px; margin: 0 auto;">
+            <span class="badge">Questions</span>
+            <h1 class="hero-title" style="font-size: 3.5rem;">Frequently Asked <span class="gradient-text">Questions</span></h1>
+            <p class="hero-description">Everything you need to know about purchasing tickets, venue policies, and seating arrangements.</p>
         </div>
-      </div>
+    </main>
+
+    <!-- FAQ Blocks Container -->
+    <section class="countdown-section" style="background: var(--bg-dark); border: none; padding-top: 1rem;">
+        <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; padding: 0 1rem;">
+            
+            <!-- Q1 -->
+            <div class="event-meta-grid" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 0; padding: 2rem;">
+                <h3 style="color: #fff; font-size: 1.15rem; font-weight: 600;">Where can I purchase tickets for the event?</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Tickets are explicitly sold online through the Virgin Ticketing Box Office. You can access the seat selector directly by clicking any of the book tickets buttons on our Home page.</p>
+            </div>
+
+            <!-- Q2 -->
+            <div class="event-meta-grid" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 0; padding: 2rem;">
+                <h3 style="color: #fff; font-size: 1.15rem; font-weight: 600;">What is the exact location and gate timing?</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">The concert takes place inside the grand auditorium at Casino du Liban on Thursday, May 29. Doors open for the reception at 07:30 PM, and the curtain rises promptly at 08:30 PM.</p>
+            </div>
+
+            <!-- Q3 -->
+            <div class="event-meta-grid" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 0; padding: 2rem;">
+                <h3 style="color: #fff; font-size: 1.15rem; font-weight: 600;">How are the ticket sales proceeds managed?</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Beats of Beirut is entirely a charity event. All net proceeds collected by the Rotary Club of Beirut Cedars are audited and paid out completely to AFEL to fund childhood safety, support, and welfare programs.</p>
+            </div>
+
+        </div>
     </section>
 
-    <section class="faq-section" aria-label="Tickets and Reservations">
-      <h2>Tickets and Reservations</h2>
-
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq3-answer" 
-          id="faq3-question"
-        >
-          Where can I purchase tickets for events?
-        </button>
-        <div id="faq3-answer" class="faq-answer" aria-labelledby="faq3-question">
-          <p>Tickets can be purchased through our official website or through authorized ticketing partners listed on our event pages.</p>
+    <!-- Premium Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/Logo.png" alt="Beats of Beirut" class="footer-logo">
+                <p>Merging the raw energy of rock performance with orchestral majesty for a powerful social cause.</p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="news.html">News & Events</a>
+                <a href="performers.html">Performers</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq4-answer" 
-          id="faq4-question"
-        >
-          Are tickets refundable?
-        </button>
-        <div id="faq4-answer" class="faq-answer" aria-labelledby="faq4-question">
-          <p>Refund policies vary by event. Please refer to the specific event page for detailed information on ticket refunds.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beats of Beirut. All Rights Reserved.</p>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <section class="faq-section" aria-label="Contact and Support">
-      <h2>Contact and Support</h2>
-
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq5-answer" 
-          id="faq5-question"
-        >
-          How can I contact the event organizers?
-        </button>
-        <div id="faq5-answer" class="faq-answer" aria-labelledby="faq5-question">
-          <p>Contact information for event organizers is provided on each event page. Alternatively, you can reach out to us through our contact page.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button 
-          class="faq-question" 
-          aria-expanded="false" 
-          aria-controls="faq6-answer" 
-          id="faq6-question"
-        >
-          Who can I speak to for media inquiries?
-        </button>
-        <div id="faq6-answer" class="faq-answer" aria-labelledby="faq6-question">
-          <p>For media inquiries, please email us at media@beatsofbeirut.com.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-</main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="news.html">News and Events</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="performers.html">Performers</a>
-        <a href="faq.html" class="active">FAQ</a>
-      </nav>
-      <br />
-      &copy; 2025 Beats of Beirut. All Rights Reserved.
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
