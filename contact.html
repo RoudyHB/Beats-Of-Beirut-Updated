@@ -9,10 +9,9 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html"><img src="images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <a href="index.html"><img src="Images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -20,6 +19,8 @@
             </button>
             <div class="nav-links">
                 <a href="index.html" class="nav-item">Home</a>
+                <a href="performers.html" class="nav-item">Performers</a>
+                <a href="news.html" class="nav-item">News</a>
                 <a href="about.html" class="nav-item">About</a>
                 <a href="faq.html" class="nav-item">FAQ</a>
                 <a href="contact.html" class="nav-item active">Contact</a>
@@ -28,7 +29,6 @@
         </div>
     </nav>
 
-    <!-- Balanced Form Framework Header -->
     <header class="subpage-header-container">
         <span class="badge">Get in Touch</span>
         <h1 class="hero-title">Connect With <span class="gradient-text">Our Team</span></h1>
@@ -56,15 +56,16 @@
         </div>
     </main>
 
-    <!-- Footer Component Area -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <img src="Images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
                 <p>Bridging classical orchestration with cutting-edge electronic audio synthesis.</p>
             </div>
             <nav class="footer-nav">
                 <a href="index.html">Home</a>
+                <a href="performers.html">Performers</a>
+                <a href="news.html">News</a>
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
@@ -78,7 +79,6 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('open');
             navLinks.classList.toggle('active');
