@@ -12,7 +12,31 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html"><img src="images/Logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <a href="index.html" style="display: block; width: 100%; max-width: 190px;">
+                <!-- Responsive Inline Logo Mark (Navbar) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" style="width: 100%; height: auto; display: block;">
+                  <defs>
+                    <!-- Dark Mode Synth Gradient -->
+                    <linearGradient id="logo-neon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#bf5af2" /> <!-- Premium Violet -->
+                      <stop offset="100%" stop-color="#5ac8fa" /> <!-- Electric Light Blue -->
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Modern Audio / Pillar Icon Group -->
+                  <g transform="translate(10, 10)">
+                    <rect x="10" y="30" width="5" height="20" rx="2.5" fill="url(#logo-neon-grad)" opacity="0.4" />
+                    <rect x="20" y="15" width="5" height="50" rx="2.5" fill="url(#logo-neon-grad)" opacity="0.7" />
+                    <rect x="30" y="0" width="5" height="80" rx="2.5" fill="url(#logo-neon-grad)" />
+                    <rect x="40" y="25" width="5" height="30" rx="2.5" fill="url(#logo-neon-grad)" opacity="0.8" />
+                    <rect x="50" y="10" width="5" height="60" rx="2.5" fill="url(#logo-neon-grad)" />
+                  </g>
+
+                  <!-- Typography Alignment -->
+                  <text x="80" y="42" font-family="'Inter', sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#ffffff">BEATS OF</text>
+                  <text x="80" y="80" font-family="'Inter', sans-serif" font-size="36" font-weight="800" letter-spacing="1" fill="url(#logo-neon-grad)">BEIRUT</text>
+                </svg>
+            </a>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -46,7 +70,27 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/Logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <div style="width: 100%; max-width: 190px; margin-bottom: 15px;">
+                    <!-- Responsive Inline Logo Mark (Footer) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" style="width: 100%; height: auto; display: block;">
+                      <defs>
+                        <!-- Reusing the Dark Mode Synth Gradient -->
+                        <linearGradient id="footer-neon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#bf5af2" />
+                          <stop offset="100%" stop-color="#5ac8fa" />
+                        </linearGradient>
+                      </defs>
+                      <g transform="translate(10, 10)">
+                        <rect x="10" y="30" width="5" height="20" rx="2.5" fill="url(#footer-neon-grad)" opacity="0.4" />
+                        <rect x="20" y="15" width="5" height="50" rx="2.5" fill="url(#footer-neon-grad)" opacity="0.7" />
+                        <rect x="30" y="0" width="5" height="80" rx="2.5" fill="url(#footer-neon-grad)" />
+                        <rect x="40" y="25" width="5" height="30" rx="2.5" fill="url(#footer-neon-grad)" opacity="0.8" />
+                        <rect x="50" y="10" width="5" height="60" rx="2.5" fill="url(#footer-neon-grad)" />
+                      </g>
+                      <text x="80" y="42" font-family="'Inter', sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#ffffff">BEATS OF</text>
+                      <text x="80" y="80" font-family="'Inter', sans-serif" font-size="36" font-weight="800" letter-spacing="1" fill="url(#footer-neon-grad)">BEIRUT</text>
+                    </svg>
+                </div>
                 <p>Bridging classical orchestration with cutting-edge electronic audio synthesis.</p>
             </div>
             <nav class="footer-nav">
