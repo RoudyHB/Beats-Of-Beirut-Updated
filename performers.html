@@ -9,9 +9,11 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html"><img src="Images/logo.png" alt="Beats of Beirut" class="nav-logo"></a>
+            <!-- Fixed to Capital L -->
+            <a href="index.html"><img src="Images/Logo.png" alt="Beats of Beirut" class="nav-logo"></a>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -29,30 +31,62 @@
         </div>
     </nav>
 
+    <!-- Page Header -->
     <header class="subpage-header-container">
         <span class="badge">Lineup</span>
-        <h1 class="hero-title">The <span class="gradient-text">Artists</span></h1>
-        <p class="hero-description">Meet the local talent and world-class musicians taking the stage.</p>
+        <h1 class="hero-title">The <span class="gradient-text">Headliners</span></h1>
+        <p class="hero-description">The legendary voices and massive festival stages defining the music experience.</p>
     </header>
 
+    <!-- Performers Grid -->
     <main class="subpage-content-section">
-        <div class="subpage-grid-container">
+        <div class="subpage-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 2rem max(1rem, 4vw);">
+            
+            <!-- Performer 1: Amr Diab -->
             <article class="content-block-card">
-                <h2>The Beirut National Symphony</h2>
-                <p>An ensemble of premier classical musicians bringing cinematic depth, soaring string arrangements, and powerful brass sections to the live performance.</p>
+                <div class="card-media-wrapper" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
+                    <img src="Images/AmrDiabinBeirut.jpg" alt="Amr Diab Live in Beirut" style="width: 100%; height: 280px; object-fit: cover;">
+                </div>
+                <h2>Amr Diab</h2>
+                <p>The global Mediterranean superstar bringing his legendary catalog of hits to the heart of Beirut for an unforgettable night of high-energy music.</p>
             </article>
 
+            <!-- Performer 2: Elissa -->
             <article class="content-block-card">
-                <h2>Electronic Producers & DJs</h2>
-                <p>Featuring prominent names from Lebanon’s underground electronic scene, delivering driving basslines, complex synthesizers, and immersive atmospheric textures.</p>
+                <div class="card-media-wrapper" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
+                    <img src="Images/Elissa.jpg" alt="Elissa" style="width: 100%; height: 280px; object-fit: cover;">
+                </div>
+                <h2>Elissa</h2>
+                <p>Lebanon's own queen of romance takes the stage, delivering her signature emotionally charged ballads and powerful vocal performances.</p>
             </article>
+
+            <!-- Performer 3: Nancy Ajram -->
+            <article class="content-block-card">
+                <div class="card-media-wrapper" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
+                    <img src="Images/NancyAjram.jpg" alt="Nancy Ajram" style="width: 100%; height: 280px; object-fit: cover;">
+                </div>
+                <h2>Nancy Ajram</h2>
+                <p>The pop icon electrifies the lineup with her infectious melodies, iconic choreography, and generation-defining pop anthems.</p>
+            </article>
+
+            <!-- Performer 4: Ragheb Alama -->
+            <article class="content-block-card">
+                <div class="card-media-wrapper" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
+                    <img src="Images/RaghebAlama.jpg" alt="Ragheb Alama" style="width: 100%; height: 280px; object-fit: cover;">
+                </div>
+                <h2>Ragheb Alama</h2>
+                <p>The superstar brings decades of unparalleled showmanship, smooth vocals, and timeless classics to the live stage experience.</p>
+            </article>
+            
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="Images/logo.png" alt="Beats of Beirut Logo" class="footer-logo">
+                <!-- Fixed to Capital L -->
+                <img src="Images/Logo.png" alt="Beats of Beirut Logo" class="footer-logo">
                 <p>Bridging classical orchestration with cutting-edge electronic audio synthesis.</p>
             </div>
             <nav class="footer-nav">
