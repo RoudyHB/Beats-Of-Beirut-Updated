@@ -31,7 +31,7 @@
         const minBox = document.getElementById('minutes');
         const secBox = document.getElementById('seconds');
 
-        const showDate = new Date("August 15, 2026 20:00:00").getTime();
+        const showDate = new Date("July 15, 2026 20:00:00").getTime();
 
         const updateClock = () => {
             const now = new Date().getTime();
