@@ -144,41 +144,5 @@
             <p>&copy; 2026 Beats of Beirut. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('open');
-            navLinks.classList.toggle('active');
-        });
-
-        // The Free-Tier Formspree Redirect Bypass Code
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const button = form.querySelector('button[type="submit"]');
-            button.textContent = "Sending...";
-            button.disabled = true;
-
-            const data = new FormData(form);
-            const xhr = new XMLHttpRequest();
-            
-            // This specific header configuration forces Formspree to process 
-            // the form without displaying their default successful submission screen
-            xhr.open('POST', 'https://formspree.io/f/mwvzlrpl');
-            xhr.setRequestHeader('Accept', 'application/json');
-            
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState !== XMLHttpRequest.DONE) return;
-                // Force push the browser directly to your custom page instantly
-                window.location.href = "https://roudyhb.github.io/Beats-Of-Beirut-Updated/thank-you.html";
-            };
-            
-            xhr.send(data);
-        });
-    </script>
 </body>
 </html>
