@@ -1,191 +1,110 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".contact-form");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone");
-  const messageInput = document.getElementById("message");
+"use strict";
 
-  // Function to show Error with aria-live for screen readers
-  function showError(input, message) {
-    let error = input.nextElementSibling;
-    if (!error || !error.classList.contains("error-message")) {
-      error = document.createElement("div");
-      error.className = "error-message";
-      error.setAttribute("aria-live", "polite"); // Added for accessibility
-      input.parentNode.insertBefore(error, input.nextSibling);
-    }
-    error.textContent = message;
-    error.style.color = "red";
-  }
+(() => {
+    
+    // Runs everything once the HTML elements are fully parsed
+    const init = () => {
+        setupMobileMenu();
+        setupCountdown();
+        setupContactForm();
+    };
 
-  function clearError(input) {
-    const error = input.nextElementSibling;
-    if (error && error.classList.contains("error-message")) {
-      error.remove();
-    }
-  }
+    // Handles open/close toggle for mobile view navigation
+    const setupMobileMenu = () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
+        if (!menuToggle || !navLinks) return;
 
-  function isValidLebanesePhone(phone) {
-    const digits = phone.replace(/\D/g, "");
-    if (digits.startsWith("961")) {
-      return /^(961)(1|3|4|5|6|7[0-9])[0-9]{6}$/.test(digits);
-    } else if (digits.length === 8) {
-      return /^(1|3|4|5|6|7[0-9])[0-9]{6}$/.test(digits);
-    } else if (digits.length === 9 && digits.startsWith("0")) {
-      return /^(0)(1|3|4|5|6|7[0-9])[0-9]{6}$/.test(digits);
-    }
-    return false;
-  }
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navLinks.classList.toggle('active');
+        });
+    };
 
-  function validateForm(event) {
-    let isValid = true;
+    // Live countdown clock for the show date (August 15, 2026 at 8:00 PM)
+    const setupCountdown = () => {
+        const dayBox = document.getElementById('days');
+        if (!dayBox) return; // Keeps the script from breaking on sub-pages without a clock
 
-    if (!isValidEmail(emailInput.value)) {
-      showError(emailInput, "Please enter a valid email address.");
-      isValid = false;
-    } else {
-      clearError(emailInput);
-    }
+        const hourBox = document.getElementById('hours');
+        const minBox = document.getElementById('minutes');
+        const secBox = document.getElementById('seconds');
 
-    if (phoneInput.value.trim() !== "" && !isValidLebanesePhone(phoneInput.value)) {
-      showError(phoneInput, "Please enter a valid Lebanese phone number.");
-      isValid = false;
-    } else {
-      clearError(phoneInput);
-    }
+        const showDate = new Date("August 15, 2026 20:00:00").getTime();
 
-    if (!messageInput.value.trim()) {
-      showError(messageInput, "Message cannot be empty.");
-      isValid = false;
-    } else {
-      clearError(messageInput);
-    }
+        const updateClock = () => {
+            const now = new Date().getTime();
+            const distance = showDate - now;
 
-    if (!isValid) {
-      event.preventDefault();
-    }
-  }
+            if (distance < 0) {
+                clearInterval(clockInterval);
+                return;
+            }
 
-  if (form) {
-    form.addEventListener("submit", validateForm);
-  }
+            // Calculations for days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (emailInput) {
-    emailInput.addEventListener("input", () => {
-      if (isValidEmail(emailInput.value)) clearError(emailInput);
-    });
-  }
+            // Makes sure numbers under 10 look clean (adds a leading zero, like '07' instead of '7')
+            dayBox.textContent = String(days).padStart(2, '0');
+            hourBox.textContent = String(hours).padStart(2, '0');
+            minBox.textContent = String(minutes).padStart(2, '0');
+            secBox.textContent = String(seconds).padStart(2, '0');
+        };
 
-  if (phoneInput) {
-    phoneInput.addEventListener("input", () => {
-      if (phoneInput.value.trim() === "" || isValidLebanesePhone(phoneInput.value)) {
-        clearError(phoneInput);
-      }
-    });
-  }
+        // Run immediately to stop the screen from flashing '00' on initial page load
+        updateClock();
+        const clockInterval = setInterval(updateClock, 1000);
+    };
 
-  if (messageInput) {
-    messageInput.addEventListener("input", () => {
-      if (messageInput.value.trim() !== "") clearError(messageInput);
-    });
-  }
+    // Intercepts the contact form to do a seamless custom redirect
+    const setupContactForm = () => {
+        const contactForm = document.getElementById('contact-form');
+        if (!contactForm) return;
 
-  // Countdown timer on Home Page
-  function countdown() {
-    const countdownEl = document.getElementById("countdown");
-    if (!countdownEl) return;
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-    const targetDate = new Date("May 29, 2025 19:30:00").getTime();
-    const now = Date.now();
-    const gap = targetDate - now;
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
 
-    const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
+            // Block double submission spam while waiting for the network response
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
 
-    if (gap > 0) {
-      const d = Math.floor(gap / day);
-      const h = Math.floor((gap % day) / hour);
-      const m = Math.floor((gap % hour) / minute);
-      const s = Math.floor((gap % minute) / second);
+            const formData = new FormData(form);
 
-      document.getElementById("days").textContent = d;
-      document.getElementById("hours").textContent = h;
-      document.getElementById("minutes").textContent = m;
-      document.getElementById("seconds").textContent = s;
-    } else {
-      countdownEl.textContent = "🎶 The concert has started!";
-    }
-  }
+            try {
+                const response = await fetch('https://formspree.io/f/mwvzlrpl', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-  setInterval(countdown, 1000);
+                if (response.ok) {
+                    // Send user directly to our custom success page layout
+                    window.location.href = "https://roudyhb.github.io/Beats-Of-Beirut-Updated/thank-you.html";
+                } else {
+                    throw new Error("Formspree rejected submission");
+                }
 
-  // Accessible FAQ toggle
-  document.querySelectorAll(".faq-question").forEach(button => {
-    button.addEventListener("click", () => {
-      const answerId = button.getAttribute("aria-controls");
-      const answer = document.getElementById(answerId);
-      if (!answer) return;
+            } catch (err) {
+                console.error("Form error:", err);
+                alert("Something went wrong while sending your message. Please try again.");
+                
+                // Re-enable form button if the message failed to send
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    };
 
-      const isExpanded = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        if (isExpanded) {
-          answer.classList.remove("show");
-        } else {
-          answer.classList.add("show");
-        }
+    document.addEventListener('DOMContentLoaded', init);
 
-    });
-
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
-        e.preventDefault();
-        button.click();
-      }
-    });
-  });
-
-const btn = document.getElementById("hamburgerBtn");
-const nav = document.getElementById("mobileNav");
-
-if (btn && nav) {
-  btn.addEventListener("click", () => {
-    nav.classList.toggle("d-none");
-  });
-}
-});
-
-//redirect to thank you page after submission
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevent default form submission
-
-  const form = e.target;
-  const data = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      // Redirect to your custom thank you page
-      window.location.href = 'thank-you.html';
-    } else {
-      response.json().then(data => {
-        if (data.errors) {
-          alert(data.errors.map(error => error.message).join(", "));
-        } else {
-          alert('Oops! There was a problem submitting your form.');
-        }
-      });
-    }
-  }).catch(() => {
-    alert('Oops! There was a problem submitting your form.');
-  });
-});
-
+})();
